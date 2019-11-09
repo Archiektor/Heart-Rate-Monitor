@@ -1,21 +1,21 @@
 {
   "name": "y",
   "version": "1.0.0",
-  "description": "Hexal Tesk Task",
+  "description": "Heart Monitor",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Archiektor/Hexal-Test.git"
+    "url": "git+https://github.com/Archiektor/Heart-Monitor.git"
   },
   "author": "Nikki Odd",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Archiektor/Hexal-Test/issues"
+    "url": "https://github.com/Archiektor/Heart-Monitor/issues"
   },
-  "homepage": "https://github.com/Archiektor/Hexal-Test#readme",
+  "homepage": "https://github.com/Archiektor/Heart-Monitor#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
@@ -25,11 +25,5 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2"
   },
-  "browserslist": [
-    "last 2 version",
-    "> 1%",
-    "maintained node versions",
-    "not dead"
-  ],
   "dependencies": {}
 }
