@@ -1,0 +1,25 @@
+$whitecolor: #ffffff
+$redcolor: #c70101
+
+@mixin btn_hover
+  &:hover
+    background-image: none
+    background-color: #c37a23
+    transition: 1.5s all
+
+@mixin btn_main
+  border-radius: 5px
+  background-color: $redcolor
+  color: $whitecolor
+  font-size: 12px
+  font-weight: 400
+  text-transform: uppercase
+  @include btn_hover
+
+@mixin flex-row
+  display: flex
+  flex-flow: row nowrap
+
+@mixin flex-column
+  display: flex
+  flex-flow: column nowrap

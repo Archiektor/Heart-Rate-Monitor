@@ -1,0 +1,61 @@
+.promo
+  background: url('../../img/bg1.jpg') center center/ cover no-repeat
+  min-height: 650px
+  padding: 21px 0 93px 0
+
+  &__elem2
+    margin-top: 75px
+    text-align: right
+    color: $whitecolor
+    font-weight: 400
+    text-transform: uppercase
+
+  &__header
+    font-size: 42px
+    margin: 0
+
+  &__subheader
+    font-size: 24px
+    margin: 17px 0 0 0
+
+
+  &__elem3
+    margin-top: 66px
+    @include flex-row
+    justify-content: flex-end
+
+  &__figure
+    max-width: 105px
+    @include flex-column
+    align-items: center
+    align-content: space-between
+    justify-content: center
+    text-align: center
+    color: $whitecolor
+    font-size: 12px
+    font-weight: 400
+    margin-right: 70px
+
+    &:last-child
+      margin-right: 0
+
+    figcaption
+      margin-top: 20px
+
+  &__elem4
+    margin-top: 67px
+    @include flex-column
+    align-items: flex-end
+
+    a
+      color: $whitecolor
+      margin-top: 18px
+      font-size: 16px
+      font-weight: 500
+
+      &:hover
+        text-decoration: none
+
+      span
+        text-transform: uppercase
+        text-decoration: underline
