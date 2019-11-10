@@ -13,7 +13,7 @@
 </head>
 
 <body>
-
+<!--Header and Promo-->
 <div class="promo">
     <div class="container">
         <header class="header">
@@ -48,8 +48,77 @@
         </div>
     </div>
 </div>
+
+<!--Section Advantages-->
 <section class="advantages">
-    <div class="container"></div>
+    <div class="container">
+        <div class="advantages__text">НАШИ ПРЕИМУЩЕСТВА</div>
+        <div class="advantages__main">
+            <div class="advantages__figure">
+                <figure>
+                    <img src="icons/cup.png" alt="pic of a bowl">
+                    <figcaption>
+                        <h3>Делимся опытом</h3>
+                        <p>Наши сотрудники всегда готовы поделиться своим опытом,
+                            так как сами бегают полумарафоны, переплыли Босфор, готовятся к соревнованиям по
+                            триатлону!</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="advantages__figure">
+                <figure>
+                    <img src="icons/heart.png" alt="pic of a heart">
+                    <figcaption>
+                        <h3>Заботимся о здоровье</h3>
+                        <p>Мы работаем для того,
+                            чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим
+                            близким!
+                        </p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="advantages__figure">
+                <figure>
+                    <img src="icons/shoe.png" alt="pic of a shoes">
+                    <figcaption>
+                        <h3>Учим бегать</h3>
+                        <p>Помогаем с обучением
+                            правильной технике бега!
+                            Дружим с крупнейшей школой бега в России - <a href="#">I LOVE RUNNING.</a>
+                        </p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
 </section>
+
+<!--Section form-->
+<section class="consultation">
+    <div class="container">
+        <div class="consultation__block">
+            <h2>Получите бесплатную консультацию по подбору пульсометра </h2>
+            <h3>Просто заполните форму заявки и мы перезвоним вам в течении 10 минут</h3>
+            <form class="feed-form" action="#">
+                <div class="feed-form__input">
+                    <label for="name"></label>
+                    <input id="name" type="text" name="name" placeholder="Ваше имя" required>
+                </div>
+                <div class="feed-form__input">
+                    <label for="phone"></label>
+                    <!--                    <input id="phone" type="number" Could be by default-->
+                    <input id="phone" type="tel" name="phone" placeholder="Ваше телефон" required>
+                </div>
+                <div class="feed-form__input">
+                    <label for="email"></label>
+                    <input id="email" type="email" name="email" placeholder="Ваша почта" required>
+                </div>
+                <!--   Better use button  <input class="btn btn_consult" type="submit" value='заказать кОНСУЛЬТАЦИЮ'>-->
+                <button class="btn btn_consult">заказать кОНСУЛЬТАЦИЮ</button>
+            </form>
+        </div>
+    </div>
+</section>
+
 </body>
 </html>
