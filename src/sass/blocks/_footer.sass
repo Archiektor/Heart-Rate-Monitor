@@ -1,0 +1,48 @@
+.footer
+  position: relative
+  height: 630px
+
+  &__info
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    width: 380px
+    height: 230px
+    background-color: rgba(199, 1, 1, 0.65)
+    text-align: center
+    color: #ffeab1
+    font-size: 20px
+    font-weight: 500
+    padding: 50px 0 60px 0
+    opacity: 0.7
+
+  &__address
+    line-height: 25px
+
+  &__phone
+    margin-top: 36px
+    color: $whitecolor
+    line-height: 25px
+
+    &:hover
+      color: $whitecolor
+
+  &__social
+    margin-top: 38px
+    @include flex-row
+    justify-content: center
+
+  &__social-item
+    margin: 0 15px
+    width: 50px
+    height: 50px
+    border-radius: 100%
+    border: 2px $whitecolor solid
+    display: flex
+    justify-content: center
+    align-items: center
+
+    &:hover
+      box-shadow: 3px 3px 15px black
+

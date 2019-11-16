@@ -1,0 +1,45 @@
+.overlay
+  display: none
+  position: fixed
+  background-color: rgba(0, 0, 0, 0.56)
+  top: 0
+  width: 100vw
+  height: 100vh
+
+  .modal
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 380px
+    min-height: 400px
+    background-color: #f2f2f2
+    text-align: center
+    padding: 25px
+
+    &__cross
+      position: absolute
+      top: -30px
+      right: -30px
+      font-size: 41px
+      line-height: 25px
+      color: rgb(199, 5, 16)
+      font-weight: 900
+      cursor: pointer
+
+    &__subtitle
+      color: #0d0d0d
+      font-size: 19px
+      font-weight: 700
+
+    &__descr
+      font-size: 14px
+      font-weight: 500
+      margin: 0
+
+    &_small
+      min-height: 140px
+
+  #consultation, #order, #thanks
+    display: none
+
