@@ -1,41 +1,3 @@
-// $(document).ready(function () {
-//     $('.carousel__inner').slick({
-//         infinite: false,
-//         speed: 1200,
-//         fade: true,
-//         cssEase: 'linear',
-//         adaptiveHeight: true,
-//         prevArrow: '<button type="button" class="slick-prev"><img src="../icons/chevron-left-solid.png" alt="left arrow"></button>',
-//         nextArrow: '<button type="button" class="slick-next"><img src="../icons/chevron-right-solid.png" alt="right arrow"></button>',
-//         responsive: [
-//             {
-//                 breakpoint: 768,
-//                 settings: {
-//                     dots: true,
-//                     arrows: false
-//                 }
-//             },
-//             {
-//                 breakpoint: 600,
-//                 settings: {
-//                     dots: true,
-//                     arrows: false
-//                 }
-//             },
-//             {
-//                 breakpoint: 480,
-//                 settings: {
-//                     dots: true,
-//                     arrows: false
-//                 }
-//             }
-//             // You can unslick at a given breakpoint now by adding:
-//             // settings: "unslick"
-//             // instead of a settings object
-//         ]
-//     });
-// });
-
 const slider = tns({
     container: '.carousel__inner',
     items: 1,
@@ -87,4 +49,54 @@ $(document).ready(function () {
     toogleSlide('.catalog-item__link');
     toogleSlide('.catalog-item__back');
 
+    // Modal Windows
+
+    $('[data-modal=consultation]').on('click', function () {
+        $('.overlay, #consultation').fadeIn('slow');
+    });
+
+    $('.btn_buy').each(function (i) {
+        $(this).on('click', function () {
+            $('#order .modal__descr').text($('.catalog-item__title').eq(i).text());
+            $('.overlay, #order').fadeIn('slow');
+        })
+    });
+
+    $('.modal__cross').on('click', function () {
+        $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
+    });
+
+    // Send Email
+
+    $('form').submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function () {
+            $(this).find("input").val("");
+            $('#consultation, #order').fadeOut();
+            $('.overlay, #thanks').fadeIn('slow');
+
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+
+    // Smooth scroll and page up
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1600) {
+            $('.pageup').fadeIn();
+        } else {
+            $('.pageup').fadeOut();
+        }
+    });
+
+    $("a[href^='#']").click(function () {
+        const _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top + "px"});
+        return false;
+    });
 });
+

@@ -25,6 +25,8 @@
       h3
         font-size: 18px
         font-weight: 700
+        animation: shadow 15s linear infinite
+        animation-delay: 5s
 
       p
         margin-top: 26px
@@ -35,3 +37,10 @@
           color: #ff0000
           text-decoration: underline
           text-transform: uppercase
+
+  &__icon
+    animation: heartbeat 3s ease infinite
+    animation-delay: 3s
+
+    &:hover
+      animation-play-state: paused

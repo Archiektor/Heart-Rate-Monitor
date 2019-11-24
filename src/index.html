@@ -1,29 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap&subset=latin-ext"
           rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
-    <!--    <link rel="stylesheet" type="text/css" href="css/slick.css"/>-->
     <link rel="stylesheet" href="css/style.min.css">
-
     <title>Подбор пульсометра</title>
 </head>
 
 <body>
 <!--Header and Promo-->
-<section class="promo">
+<section class="promo" id="up">
     <div class="container">
         <header class="header">
             <a class="header__logo" href="#"><img src="icons/running_man.png" alt="logo with running man"></a>
             <div class="header__official"><p>Официальный представитель<br><span class="header__text">Garmin, Polar, Suunto</span>
             </p></div>
             <div class="header__call"><a class="header__text" href="tel:+74999228974">+7 (499) 922-89-74</a>
-                <button class="btn">заказать звонок</button>
+                <button data-modal='consultation' class="btn">заказать звонок</button>
             </div>
         </header>
         <div class="promo__elem2">
@@ -45,7 +42,7 @@
             </figure>
         </div>
         <div class="promo__elem4">
-            <button class="btn btn_main">заказать кОНСУЛЬТАЦИЮ</button>
+            <button data-modal='consultation' class="btn btn_main">заказать кОНСУЛЬТАЦИЮ</button>
             <a href="#">или <span>ПЕРЕЙТИ В КАТАЛОГ</span></a>
         </div>
     </div>
@@ -69,7 +66,7 @@
             </div>
             <div class="advantages__figure">
                 <figure>
-                    <img src="icons/heart.png" alt="pic of a heart">
+                    <img src="icons/heart.png" alt="pic of a heart" class="advantages__icon">
                     <figcaption>
                         <h3>Заботимся о здоровье</h3>
                         <p>Мы работаем для того,
@@ -123,7 +120,7 @@
 </section>
 
 <!--Section carousel-->
-<section class="carousel">
+<div class="carousel">
     <div class="container_fluid">
         <div class="carousel__inner">
             <div><img src="img/puls1.jpg" alt="pulsometr's model number 1"></div>
@@ -133,7 +130,7 @@
         <button type="button" class="prev"><img src="icons/chevron-left-solid.png" alt="left arrow"></button>
         <button type="button" class="next"><img src="icons/chevron-right-solid.png" alt="right arrow"></button>
     </div>
-</section>
+</div>
 <!--<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
 <!--<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
 <!--<script src="js/slick.min.js"></script>-->
@@ -157,13 +154,13 @@
             <div class="catalog-item">
                 <div class="catalog-item__wrapper">
                     <div class="catalog-item__content catalog-item__content_active">
-                        <figure>
+                        <div>
                             <img src="img/pulsometr.png" class="catalog-item__img" alt="img of pulsometr">
-                            <figcaption class="catalog-item__title">Пульсометр Polar FT1</figcaption>
+                            <div class="catalog-item__title">Пульсометр Polar FT1</div>
                             <p class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном
                                 ритме</p>
                             <a href="" class="catalog-item__link">ПОДРОБНЕЕ</a>
-                        </figure>
+                        </div>
                     </div>
                     <div class="catalog-item__list">
                         <ul>
@@ -186,13 +183,13 @@
             <div class="catalog-item">
                 <div class="catalog-item__wrapper">
                     <div class="catalog-item__content catalog-item__content_active">
-                        <figure>
+                        <div>
                             <img src="img/pulsometr.png" class="catalog-item__img" alt="img of pulsometr">
-                            <figcaption class="catalog-item__title">Пульсометр Polar FT1</figcaption>
-                            <p class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном
-                                ритме</p>
+                            <div class="catalog-item__title">Пульсометр Suunto M2</div>
+                            <p class="catalog-item__descr">Пульсометр начального уровня с комфортным тканевым ремешком
+                            </p>
                             <a href="" class="catalog-item__link">ПОДРОБНЕЕ</a>
-                        </figure>
+                        </div>
                     </div>
                     <div class="catalog-item__list">
                         <ul>
@@ -215,13 +212,14 @@
             <div class="catalog-item">
                 <div class="catalog-item__wrapper">
                     <div class="catalog-item__content catalog-item__content_active">
-                        <figure>
+                        <div>
                             <img src="img/pulsometr.png" class="catalog-item__img" alt="img of pulsometr">
-                            <figcaption class="catalog-item__title">Пульсометр Polar FT1</figcaption>
-                            <p class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном
-                                ритме</p>
+                            <div class="catalog-item__title">Пульсометр Polar FT4
+                            </div>
+                            <p class="catalog-item__descr">Улучшенная версия Polar FT1, имеющая следующие улучшения:
+                            </p>
                             <a href="" class="catalog-item__link">ПОДРОБНЕЕ</a>
-                        </figure>
+                        </div>
                     </div>
                     <div class="catalog-item__list">
                         <ul>
@@ -244,13 +242,13 @@
             <div class="catalog-item">
                 <div class="catalog-item__wrapper">
                     <div class="catalog-item__content catalog-item__content_active">
-                        <figure>
+                        <div>
                             <img src="img/pulsometr.png" class="catalog-item__img" alt="img of pulsometr">
-                            <figcaption class="catalog-item__title">Пульсометр Polar FT1</figcaption>
+                            <div class="catalog-item__title">Пульсометр Polar FT1</div>
                             <p class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном
                                 ритме</p>
                             <a href="" class="catalog-item__link">ПОДРОБНЕЕ</a>
-                        </figure>
+                        </div>
                     </div>
                     <div class="catalog-item__list">
                         <ul>
@@ -273,13 +271,13 @@
             <div class="catalog-item">
                 <div class="catalog-item__wrapper">
                     <div class="catalog-item__content catalog-item__content_active">
-                        <figure>
+                        <div>
                             <img src="img/pulsometr.png" class="catalog-item__img" alt="img of pulsometr">
-                            <figcaption class="catalog-item__title">Пульсометр Polar FT1</figcaption>
+                            <div class="catalog-item__title">Пульсометр Polar FT1</div>
                             <p class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном
                                 ритме</p>
                             <a href="" class="catalog-item__link">ПОДРОБНЕЕ</a>
-                        </figure>
+                        </div>
                     </div>
                     <div class="catalog-item__list">
                         <ul>
@@ -302,13 +300,13 @@
             <div class="catalog-item">
                 <div class="catalog-item__wrapper">
                     <div class="catalog-item__content catalog-item__content_active">
-                        <figure>
+                        <div>
                             <img src="img/pulsometr.png" class="catalog-item__img" alt="img of pulsometr">
-                            <figcaption class="catalog-item__title">Пульсометр Polar FT1</figcaption>
+                            <div class="catalog-item__title">Пульсометр Polar FT1</div>
                             <p class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном
                                 ритме</p>
                             <a href="" class="catalog-item__link">ПОДРОБНЕЕ</a>
-                        </figure>
+                        </div>
                     </div>
                     <div class="catalog-item__list">
                         <ul>
@@ -333,13 +331,13 @@
             <div class="catalog-item">
                 <div class="catalog-item__wrapper">
                     <div class="catalog-item__content catalog-item__content_active">
-                        <figure>
+                        <div>
                             <img src="img/pulsometr.png" class="catalog-item__img" alt="img of pulsometr">
-                            <figcaption class="catalog-item__title">Пульсометр Polar FT1</figcaption>
+                            <div class="catalog-item__title">Пульсометр Polar FT1</div>
                             <p class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном
                                 ритме</p>
                             <a href="" class="catalog-item__link">ПОДРОБНЕЕ</a>
-                        </figure>
+                        </div>
                     </div>
                     <div class="catalog-item__list">
                         <ul>
@@ -365,13 +363,13 @@
             <div class="catalog-item">
                 <div class="catalog-item__wrapper">
                     <div class="catalog-item__content catalog-item__content_active">
-                        <figure>
+                        <div>
                             <img src="img/pulsometr.png" class="catalog-item__img" alt="img of pulsometr">
-                            <figcaption class="catalog-item__title">Пульсометр Polar FT1</figcaption>
+                            <div class="catalog-item__title">Пульсометр Polar FT1</div>
                             <p class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном
                                 ритме</p>
                             <a href="" class="catalog-item__link">ПОДРОБНЕЕ</a>
-                        </figure>
+                        </div>
                     </div>
                     <div class="catalog-item__list">
                         <ul>
@@ -394,13 +392,13 @@
             <div class="catalog-item">
                 <div class="catalog-item__wrapper">
                     <div class="catalog-item__content catalog-item__content_active">
-                        <figure>
+                        <div>
                             <img src="img/pulsometr.png" class="catalog-item__img" alt="img of pulsometr">
-                            <figcaption class="catalog-item__title">Пульсометр Polar FT1</figcaption>
+                            <div class="catalog-item__title">Пульсометр Polar FT1</div>
                             <p class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном
                                 ритме</p>
                             <a href="" class="catalog-item__link">ПОДРОБНЕЕ</a>
-                        </figure>
+                        </div>
                     </div>
                     <div class="catalog-item__list">
                         <ul>
@@ -478,8 +476,7 @@
 
 <footer class="footer">
     <div class="footer__map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1887.331889492091!2d37.64546792821278!3d55.76842919548009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEwNzA3OA!5e0!3m2!1sru!2spl!4v1573897181991!5m2!1sru!2spl"
-                width="100%" height="630" style="border:0;" allowfullscreen=""></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1887.331889492091!2d37.64546792821278!3d55.76842919548009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEwNzA3OA!5e0!3m2!1sru!2spl!4v1573897181991!5m2!1sru!2spl"></iframe>
     </div>
     <div class="footer__info">
         <address class="footer_address">Москва, Мясницкий проезд, д.3с1</address>
@@ -538,9 +535,11 @@
         <h2 class="modal__subtitle">Спасибо за вашу заявку!</h2>
         <p class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</p>
     </div>
-
-
 </div>
+
+<a href="#up" class="pageup">
+    <img src="icons/chevronup.svg" alt="pageup">
+</a>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
