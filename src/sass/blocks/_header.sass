@@ -1,6 +1,10 @@
 .header
   @include flex-row
   justify-content: space-between
+  @include for-phone-only
+    display: flex
+    flex-flow: column nowrap
+    align-items: center
 
   &__logo
     height: 45px
@@ -16,11 +20,16 @@
     font-weight: 400
     margin-top: 12px
     margin-bottom: 12px
+    @include for-phone-only
+      margin-top: 26px
 
   &__text
     color: $whitecolor
     font-size: 18px
     font-weight: 700
+    @include for-phone-only
+      margin-top: 13px
+      margin-bottom: 13px
 
   &__official
     text-align: center

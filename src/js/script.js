@@ -1,25 +1,18 @@
 const slider = tns({
     container: '.carousel__inner',
     items: 1,
-    // responsive: {
-    //     640: {
-    //         edgePadding: 20,
-    //         gutter: 20,
-    //         items: 2
-    //     },
-    //     700: {
-    //         gutter: 30
-    //     },
-    //     900: {
-    //         items: 3
-    //     }
-    // },
+    responsive: {
+        640: {
+            gutter: 20,
+        }
+    },
     slideBy: 'page',
     autoplay: false,
     center: true,
     controls: false,
     nav: false
 });
+
 
 document.querySelector('.prev').addEventListener('click', function () {
     slider.goTo('prev');

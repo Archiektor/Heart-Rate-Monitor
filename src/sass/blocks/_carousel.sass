@@ -1,12 +1,17 @@
 .carousel
+  box-sizing: border-box
   min-height: 527px
   background-color: $whitecolor
   padding: 108px 0
+  @include for-tablet-portrait-up
+    padding: 40px 0
+  @include for-phone-only
+    min-height: 327px
 
   &__inner
     position: relative
     margin: 0 auto
-    width: 750px
+    width: 700px
 
   .prev, .next
     position: absolute
@@ -28,3 +33,7 @@
     img
       display: block
       margin: 0 auto
+      @include for-tablet-portrait-up
+        padding: 0
+      @include for-phone-only
+        width: 350px
